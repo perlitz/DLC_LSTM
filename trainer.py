@@ -21,9 +21,9 @@ def main():
 
     # GET DATA
     corpus = Corpus(cfg.TRAIN.DATA_PATH)
-    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)
-    val_data = batchify(corpus.valid, cfg.TRAIN.BATCH_SIZE, device)
-    test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)
+    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)[0:400]
+    val_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)
+    test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)[0:400]
     n_tokens = len(corpus.dictionary)
     # BUILD MODEL
     model = LangModelRNN(n_tokens = n_tokens,

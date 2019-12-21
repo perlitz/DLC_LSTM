@@ -39,7 +39,7 @@ def train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data):
 def evaluate(n_tokens ,model, test_data, criterion, epoch):
     model.eval()
     total_loss = 0.
-    hidden = model.init_hidden(cfg.TRAIN.BATCH_SIZE)
+    hidden = model.init_hidden(cfg.TRAIN.EVAL_BATCH_SIZE)
     with torch.no_grad():
 
         for batch, seq_num in enumerate(range(0, test_data.size(0) - 1, cfg.TRAIN.SEQ_LEN)):
