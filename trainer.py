@@ -40,17 +40,15 @@ def main():
     train_loss_list = []
     test_loss_list  = []
 
-    fig, ax = plt.subplots()
-
     # TRAIN ONE EPOCH
-    for epoch in range(cfg.TRAIN.N_EPOCHS):
+    for epoch in range(1,cfg.TRAIN.N_EPOCHS+1):
 
         train_loss_list.append(train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data))
         test_loss_list.append(evaluate(n_tokens ,model, test_data, criterion, epoch))
         scheduler.step(epoch)
-        ax.plot(train_loss_list, range(epoch))
-        ax.plot(test_loss_list,  range(epoch))
-        fig.show()
+        plt.plot(train_loss_list, np.arange(epoch))
+        plt.plot(test_loss_list,  np.arange(epoch))
+
 
 
 
