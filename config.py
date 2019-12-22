@@ -5,7 +5,7 @@ _C = CN()
 
 _C.SYSTEM = CN()
 _C.SYSTEM.SEED = 1111
-_C.SYSTEM.MODEL_SAVE_PATH = False
+_C.SYSTEM.MODEL_SAVE_PATH = '/Users/yotam/Documents/DLC_LSTM/saved/models'
 _C.SYSTEM.MODEL_LOAD_PATH = False
 # # Number of GPUS to use in the experiment
 # _C.SYSTEM.NUM_GPUS = 8

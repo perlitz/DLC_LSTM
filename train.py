@@ -51,15 +51,14 @@ def evaluate(n_tokens ,model, test_data, criterion, epoch):
             total_loss += len(data) * loss
 
     print('evaluate : | epoch {:3d} | loss {:5.2f}'.format(
-        epoch, len(test_data) // cfg.TRAIN.SEQ_LEN,
-                      total_loss / (len(test_data) - 1)))
+                        epoch,         total_loss / (len(test_data) - 1)))
 
     return total_loss / (len(test_data) - 1)
 
-def save_model_if_better(eval_loss_list, model_save_path, model, criterion, optimizer):
-    if cfg.SYSTEM.MODEL_SAVE_PATH:
+def save_model_if_better(eval_loss_list, model, criterion, optimizer):
+    if cfg.SYSTEM.MODEL_SAVE_PATH and (len(eval_loss_list) > 1):
         if eval_loss_list[-1] < min(eval_loss_list[:-1]):
-            with open(model_save_path, 'wb') as f:
+            with open(cfg.SYSTEM.MODEL_SAVE_PATH, 'wb') as f:
                 torch.save([model, criterion, optimizer], f)
                 print('Saving model (new best validation)')
 

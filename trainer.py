@@ -30,16 +30,16 @@ def main():
     n_tokens = len(corpus.dictionary)
     # BUILD MODEL
 
-    if cfg.SYSTEM.LOAD_MODEL_PATH:
+    if cfg.SYSTEM.MODEL_LOAD_PATH:
         with open(cfg.SYSTEM.LOAD_MODEL_PATH, 'rb') as f:
             model, criterion, optimizer = torch.load(f)
     else:
         model = LangModelRNN(n_tokens = n_tokens,
-                                   embedding_dim = cfg.NET.EMBED_DIM,
-                                   hidden_dim = cfg.NET.HIDDEN_DIM,
-                                   n_layers = cfg.NET.N_LAYERS,
-                                   dropout = cfg.NET.DROP_PROB,
-                                   rnn_type='LSTM')
+                             embedding_dim = cfg.NET.EMBED_DIM,
+                             hidden_dim = cfg.NET.HIDDEN_DIM,
+                             n_layers = cfg.NET.N_LAYERS,
+                             dropout = cfg.NET.DROP_PROB,
+                             rnn_type='LSTM')
 
         criterion = torch.nn.CrossEntropyLoss()
         optimizer = torch.optim.SGD(lr=cfg.TRAIN.INIT_LR, params=model.parameters())
@@ -55,7 +55,7 @@ def main():
 
         train_loss_list.append(train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data))
         test_loss_list.append(evaluate(n_tokens ,model, test_data, criterion, epoch))
-        save_model_if_better(test_loss_list, cfg.SYSYEM.MODEL_SAVE_PATH ,model, optimizer, criterion)
+        save_model_if_better(test_loss_list ,model, optimizer, criterion)
         scheduler.step(epoch)
 
         writer.add_scalar('train_loss', train_loss_list[-1], epoch)
