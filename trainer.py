@@ -6,10 +6,13 @@ import torch
 from model.model import LangModelRNN
 from config import cfg
 from model.loss import perplexity
-from train import train_epoch, evaluate
+from train import train_epoch, evaluate, save_model_if_better
 import time
 import matplotlib.pyplot as plt
 import seaborn as sns
+from torch.utils.tensorboard import SummaryWriter
+
+
 def main():
 
     cfg.merge_from_file("experiment.yaml")
@@ -21,33 +24,47 @@ def main():
 
     # GET DATA
     corpus = Corpus(cfg.TRAIN.DATA_PATH)
-    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)[0:400]
+    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)
     val_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)
-    test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)[0:400]
+    test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)
     n_tokens = len(corpus.dictionary)
     # BUILD MODEL
-    model = LangModelRNN(n_tokens = n_tokens,
-                               embedding_dim = cfg.NET.EMBED_DIM,
-                               hidden_dim = cfg.NET.HIDDEN_DIM,
-                               n_layers = cfg.NET.N_LAYERS,
-                               dropout = cfg.NET.DROP_PROB,
-                               rnn_type='LSTM')
 
-    criterion = torch.nn.CrossEntropyLoss()
-    lr = 10
-    optimizer = torch.optim.SGD(lr=lr, params=model.parameters())
+    if cfg.SYSTEM.LOAD_MODEL_PATH:
+        with open(cfg.SYSTEM.LOAD_MODEL_PATH, 'rb') as f:
+            model, criterion, optimizer = torch.load(f)
+    else:
+        model = LangModelRNN(n_tokens = n_tokens,
+                                   embedding_dim = cfg.NET.EMBED_DIM,
+                                   hidden_dim = cfg.NET.HIDDEN_DIM,
+                                   n_layers = cfg.NET.N_LAYERS,
+                                   dropout = cfg.NET.DROP_PROB,
+                                   rnn_type='LSTM')
+
+        criterion = torch.nn.CrossEntropyLoss()
+        optimizer = torch.optim.SGD(lr=cfg.TRAIN.INIT_LR, params=model.parameters())
+
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.2, last_epoch=-1)
+
     train_loss_list = []
     test_loss_list  = []
+    writer = SummaryWriter()
 
     # TRAIN ONE EPOCH
     for epoch in range(1,cfg.TRAIN.N_EPOCHS+1):
 
         train_loss_list.append(train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data))
         test_loss_list.append(evaluate(n_tokens ,model, test_data, criterion, epoch))
+        save_model_if_better(test_loss_list, cfg.SYSYEM.MODEL_SAVE_PATH ,model, optimizer, criterion)
         scheduler.step(epoch)
-        plt.plot(train_loss_list, np.arange(epoch))
-        plt.plot(test_loss_list,  np.arange(epoch))
+
+        writer.add_scalar('train_loss', train_loss_list[-1], epoch)
+        writer.add_scalar('test_loss',   test_loss_list[-1], epoch)
+        plt.plot(train_loss_list)
+        plt.plot(test_loss_list)
+        plt.draw()
+
+    plt.show()
 
 
 

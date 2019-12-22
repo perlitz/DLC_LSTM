@@ -36,6 +36,7 @@ def train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data):
 
     return total_loss / (len(train_data) - 1)
 
+
 def evaluate(n_tokens ,model, test_data, criterion, epoch):
     model.eval()
     total_loss = 0.
@@ -44,18 +45,23 @@ def evaluate(n_tokens ,model, test_data, criterion, epoch):
 
         for batch, seq_num in enumerate(range(0, test_data.size(0) - 1, cfg.TRAIN.SEQ_LEN)):
             data, targets = get_batch(test_data, seq_num, cfg.TRAIN.SEQ_LEN)
-            hidden = repackage_hidden(hidden)
             output, hidden = model(data, hidden)
-
+            hidden = repackage_hidden(hidden)
             loss = perplexity(output.view(-1, n_tokens), targets, criterion)
             total_loss += len(data) * loss
 
-    print('test : | epoch {:3d} | loss {:5.2f}'.format(
+    print('evaluate : | epoch {:3d} | loss {:5.2f}'.format(
         epoch, len(test_data) // cfg.TRAIN.SEQ_LEN,
                       total_loss / (len(test_data) - 1)))
 
     return total_loss / (len(test_data) - 1)
 
+def save_model_if_better(eval_loss_list, model_save_path, model, criterion, optimizer):
+    if cfg.SYSTEM.MODEL_SAVE_PATH:
+        if eval_loss_list[-1] < min(eval_loss_list[:-1]):
+            with open(model_save_path, 'wb') as f:
+                torch.save([model, criterion, optimizer], f)
+                print('Saving model (new best validation)')
 
 def repackage_hidden(h):
     """Wraps hidden states in new Tensors, to detach them from their history."""
