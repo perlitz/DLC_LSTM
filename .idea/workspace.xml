@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634055a4-1520-48c0-8b4c-932a68a6a668" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lstm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lstm_with_drop.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DLC_LSTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DLC_LSTM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lstm_no_drop.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,76 +21,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/loss.py">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lstm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trainer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+            <state relative-caret-position="524">
+              <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/yacs/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
-              <folding>
-                <element signature="e#19300#19359#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1228">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#215#1461#0" expanded="true" />
-                <element signature="e#1543#2263#0" expanded="true" />
-                <element signature="e#2341#2601#0" expanded="true" />
-                <element signature="e#2275#2477#0" expanded="true" />
-                <element signature="e#2506#2581#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#262#851#0" expanded="true" />
+                <element signature="e#1512#1841#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,16 +60,21 @@
         <option value="$PROJECT_DIR$/logger/logger_config.py" />
         <option value="$PROJECT_DIR$/data/data.py" />
         <option value="$PROJECT_DIR$/model/loss.py" />
-        <option value="$PROJECT_DIR$/model/model.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/trainer.py" />
+        <option value="$PROJECT_DIR$/lstm_no_drop.yaml" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/trainer.py" />
+        <option value="$PROJECT_DIR$/model/model.py" />
+        <option value="$PROJECT_DIR$/lstm_with_drop.yaml" />
+        <option value="$PROJECT_DIR$/lstm.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="954" />
-    <option name="height" value="1200" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="8" />
+    <option name="y" value="53" />
+    <option name="width" value="2560" />
+    <option name="height" value="1387" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -139,28 +94,150 @@
             <path>
               <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
               <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="PTB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
               <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
-              <item name="saved" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="saved_models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
               <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="11_lstm_with_drop_111" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="13" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="14" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="15" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="16" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="17" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="18" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="19" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="20" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="21" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="22" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="23" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="26" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="27" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="28" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DLC_LSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DLC_LSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="sacred_exps" type="462c0819:PsiDirectoryNode" />
+              <item name="29" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -170,10 +247,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../objecttracking" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -190,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trainer">
+  <component name="RunManager" selected="Python.lstm">
     <configuration name="_pydev_execfile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DLC_LSTM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,6 +314,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DLC_LSTM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lstm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="trainer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DLC_LSTM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,6 +358,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lstm" />
         <item itemvalue="Python.trainer" />
         <item itemvalue="Python.data" />
         <item itemvalue="Python._pydev_execfile" />
@@ -275,27 +378,38 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1162" height="1200" extended-state="6" />
+    <frame x="8" y="53" width="2560" height="1387" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13496932" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15977742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45900178" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36452764" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35112143" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36349574" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3296837" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32869297" />
+      <window_info anchor="bottom" id="Mypy" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -305,6 +419,26 @@
           <url>file://$PROJECT_DIR$/logger/logger_config.py</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model/model.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model/model.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trainer.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lstm.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -330,9 +464,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json" />
-    <entry file="file://$PROJECT_DIR$/experiment.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
@@ -364,100 +495,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="331" selection-start-line="331" selection-end-line="331" />
-          <folding>
-            <element signature="e#10326#10458#0" expanded="true" />
-            <element signature="e#10721#10989#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="510" lean-forward="true" selection-start-line="510" selection-end-line="510" />
-          <folding>
-            <element signature="e#20955#22167#0" expanded="true" />
-            <element signature="e#22693#23289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/nn/init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/optim/lr_scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/codecs.py" />
+    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/nn/modules/module.py" />
+    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/nn/init.py" />
+    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/torch/optim/lr_scheduler.py" />
+    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/yacs/config.py" />
     <entry file="file://$PROJECT_DIR$/model/loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="72">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../python_envs/miniconda3/envs/DLPT/lib/python3.6/site-packages/yacs/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-          <folding>
-            <element signature="e#19300#19359#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1228">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="-679">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#215#1461#0" expanded="true" />
-            <element signature="e#1543#2263#0" expanded="true" />
-            <element signature="e#2341#2601#0" expanded="true" />
-            <element signature="e#2275#2477#0" expanded="true" />
-            <element signature="e#2506#2581#0" expanded="true" />
+            <element signature="e#237#1448#0" expanded="true" />
+            <element signature="e#1515#2206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/31_lstm_no_drop_124/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lstm_no_drop.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/10/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/12/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/13/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/14/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/15/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1730" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/16/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/17/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/18/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-962" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/19/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7658" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/20/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/21/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/21/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/22/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/23/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/24/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/24/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/26/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/27/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/28/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/29/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/31_lstm_no_drop_124/metrics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/11_lstm_with_drop_111/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/11_lstm_with_drop_111/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runs/sacred_exps/34_lstm_with_drop_108/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351" />
+      </provider>
+    </entry>
+    <entry file="file:///etc/anaconda3/lib/python3.6/site-packages/yacs/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="512" selection-start-line="512" selection-end-line="512" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        <state relative-caret-position="297">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/model/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="408">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lstm_with_drop.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///etc/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="550" selection-start-line="550" selection-end-line="550" />
+          <folding>
+            <element signature="e#20167#20763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#262#851#0" expanded="true" />
+            <element signature="e#1512#1841#0" expanded="true" />
           </folding>
         </state>
       </provider>
