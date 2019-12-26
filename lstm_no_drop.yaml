@@ -1,0 +1,11 @@
+TRAIN:
+   N_EPOCHS: 13
+   INIT_LR: 1
+   DROP_LR_AFTER: 4
+   DROP_LR_BY: 2.0
+   WIN_INIT: 0.1
+NET:
+   DROP_PROB: 0.0
+
+# Results are in exp 31
+# This gives 124.14 loss on the validation and 118.33 on test
