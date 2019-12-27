@@ -13,17 +13,17 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from tensorboardX import SummaryWriter
 
-from sacred import Experiment
-from sacred.observers import FileStorageObserver
+# from sacred import Experiment
+# from sacred.observers import FileStorageObserver
+#
+# ex = Experiment()
+# output_dir = '/home/yotampe/Code/Edu/DLC_LSTM/runs/sacred_exps'
+# ex.observers.append(FileStorageObserver.create(output_dir))
+#
+# @ex.automain
+def main():#_run):
 
-ex = Experiment()
-output_dir = '/home/yotampe/Code/Edu/DLC_LSTM/runs/sacred_exps'
-ex.observers.append(FileStorageObserver.create(output_dir))
-
-@ex.automain
-def main(_run):
-
-    cfg.merge_from_file('lstm_with_drop.yaml')
+    cfg.merge_from_file('lstm_with_drop_mac.yaml')
     cfg.freeze()
     print(cfg)
 
@@ -51,9 +51,11 @@ def main(_run):
                     embeddings[index] = vector
             return torch.from_numpy(embeddings).float()
 
-    glove_path = '/home/yotampe/Code/Edu/glove.6B.200d.txt'
-    glove = load_glove_embeddings(glove_path, corpus.dictionary.word2idx, 200)
-
+    if False:
+        glove_path = '/home/yotampe/Code/Edu/glove.6B.200d.txt'
+        glove = load_glove_embeddings(glove_path, corpus.dictionary.word2idx, 200)
+    else:
+        glove = None
     #################################################
     #################################################
 
@@ -105,16 +107,16 @@ def main(_run):
     plt.legend()
     plt.show()
 
-    ex.log_scalar('Valid loss', valid_loss_list[-1])
-    ex.log_scalar('Train loss', train_loss_list[-1])
+    # ex.log_scalar('Valid loss', valid_loss_list[-1])
+    # ex.log_scalar('Train loss', train_loss_list[-1])
 
     test_loss = evaluate(n_tokens ,model, test_data.to(device), criterion, 999)
-    ex.log_scalar('Test loss', test_loss)
+    # ex.log_scalar('Test loss', test_loss)
 
     print('=' * 89)
     print('| End of training | test loss {:5.2f}'.format(test_loss))
     print('=' * 89)
 # # read data from text files
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
 

@@ -24,7 +24,6 @@ class LangModelRNN(nn.Module):
         self.glove = glove
         self.init_weights()
 
-
     def forward(self, x, hidden):
 
         encoded = self.dropout(self.encoder(x))
@@ -46,10 +45,10 @@ class LangModelRNN(nn.Module):
     def init_weights(self):
         initrange = self.win_init
 
-        # if self.glove:
-        self.encoder.weight = nn.Parameter(self.glove)
-        # else:
-        #     self.encoder.weight.data.uniform_(-0.1, 0.1)
+        if self.glove:
+            self.encoder.weight = nn.Parameter(self.glove)
+        else:
+            self.encoder.weight.data.uniform_(-0.1, 0.1)
 
         self.decoder.bias.data.zero_()
         self.decoder.weight.data.uniform_(-initrange, initrange)
