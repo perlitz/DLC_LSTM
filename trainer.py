@@ -32,8 +32,8 @@ def main():#_run):
 
     # GET DATA
     corpus = Corpus(cfg.TRAIN.DATA_PATH)
-    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)
-    valid_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)
+    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)[:100]
+    valid_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)[:100]
     test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)
     n_tokens = len(corpus.dictionary)
 

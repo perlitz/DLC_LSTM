@@ -62,7 +62,7 @@ def evaluate(n_tokens ,model, test_data, criterion, epoch):
     return val_peprp
 
 def save_model_if_better(eval_loss_list, model, criterion, optimizer):
-    if cfg.SYSTEM.MODEL_SAVE_PATH and (len(eval_loss_list) > 1):
+    if (cfg.SYSTEM.MODEL_SAVE_PATH !='') and (len(eval_loss_list) > 1):
         if eval_loss_list[-1] < min(eval_loss_list[:-1]):
             with open(cfg.SYSTEM.MODEL_SAVE_PATH, 'wb+') as f:
                 torch.save([model, criterion, optimizer], f)

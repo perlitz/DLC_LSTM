@@ -9,4 +9,6 @@ TRAIN:
    CLIP: 5.
 NET:
    DROP_PROB: 0.5
+SYSTEM:
+   MODEL_SAVE_PATH: ''
 
