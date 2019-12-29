@@ -68,5 +68,5 @@ def batchify(data, bsz, device):
 def get_batch(source, i, seq_len):
     cur_seq_len = min(seq_len, len(source) - 1 - i)
     data = source[i:i+cur_seq_len, :]
-    target = source[i+1:i+1+cur_seq_len, :].view(-1)
+    target = source[i+1:i+1+cur_seq_len, :]#.view(-1)
     return data, target

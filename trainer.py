@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 from model.model import LangModelRNN
 from config import cfg
-from model.loss import perplexity
+# from model.loss import perplexity
 from train import train_epoch, evaluate, save_model_if_better
 import time
 import matplotlib.pyplot as plt
@@ -23,17 +23,21 @@ from tensorboardX import SummaryWriter
 # @ex.automain
 def main():#_run):
 
-    cfg.merge_from_file('lstm_with_drop_mac.yaml')
+    cfg.merge_from_file('lstm_with_drop.yaml')
     cfg.freeze()
     print(cfg)
 
     torch.manual_seed(cfg.SYSTEM.SEED)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if device == torch.device('cpu'):
+        print('Running on CPU')
+    else:
+        print('Running on GPU')
 
     # GET DATA
     corpus = Corpus(cfg.TRAIN.DATA_PATH)
-    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)[:100]
-    valid_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)[:100]
+    train_data = batchify(corpus.train, cfg.TRAIN.BATCH_SIZE, device)
+    valid_data = batchify(corpus.valid, cfg.TRAIN.EVAL_BATCH_SIZE, device)
     test_data = batchify(corpus.test, cfg.TRAIN.EVAL_BATCH_SIZE, device)
     n_tokens = len(corpus.dictionary)
 

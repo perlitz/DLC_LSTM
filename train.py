@@ -3,7 +3,7 @@ from config import cfg
 import torch
 import torch.nn as nn
 from data.data import get_batch
-from model.loss import perplexity, nlll, log_softmax
+from model.loss import perplexity
 import numpy as np
 
 
@@ -20,10 +20,14 @@ def train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data):
         hidden = repackage_hidden(hidden)
         output, hidden = model(data, hidden)
 
-        loss = nlll(log_softmax(output), targets)
+        loss = criterion(output.view(-1, n_tokens), targets.view(-1))
+        # loss = perplexity(output.view(-1, n_tokens), targets, criterion)
         loss.backward()
 
         nn.utils.clip_grad_norm_(model.parameters(), cfg.TRAIN.CLIP)
+        for p in model.parameters():
+            p.data.add_(-get_lr(optimizer), p.grad.data)
+
 
         optimizer.step()
         total_loss += loss.item()
@@ -43,26 +47,24 @@ def train_epoch(n_tokens, criterion, epoch, model, optimizer, train_data):
 
 def evaluate(n_tokens ,model, test_data, criterion, epoch):
     model.eval()
+    total_loss = 0.
     hidden = model.init_hidden(cfg.TRAIN.EVAL_BATCH_SIZE)
     with torch.no_grad():
 
-        loss_list = []
         for batch, seq_num in enumerate(range(0, test_data.size(0) - 1, cfg.TRAIN.SEQ_LEN)):
             data, targets = get_batch(test_data, seq_num, cfg.TRAIN.SEQ_LEN)
             output, hidden = model(data, hidden)
             hidden = repackage_hidden(hidden)
+            loss = perplexity(output.view(-1, n_tokens), targets, criterion)
+            total_loss += len(data) * loss
 
-            loss_list.append(nlll(log_softmax(output),targets)/cfg.TRAIN.EVAL_BATCH_SIZE)
+    print('evaluate : | epoch {:3d} | loss {:5.2f}'.format(
+                        epoch,         total_loss / (len(test_data) - 1)))
 
-    val_peprp = torch.exp(torch.mean(torch.FloatTensor(loss_list)))
-
-    print('evaluate : | epoch {:3d} | perplexity {:5.2f}'.format(
-                        epoch,         val_peprp))
-
-    return val_peprp
+    return total_loss.item() / (len(test_data) - 1)
 
 def save_model_if_better(eval_loss_list, model, criterion, optimizer):
-    if (cfg.SYSTEM.MODEL_SAVE_PATH !='') and (len(eval_loss_list) > 1):
+    if cfg.SYSTEM.MODEL_SAVE_PATH and (len(eval_loss_list) > 1):
         if eval_loss_list[-1] < min(eval_loss_list[:-1]):
             with open(cfg.SYSTEM.MODEL_SAVE_PATH, 'wb+') as f:
                 torch.save([model, criterion, optimizer], f)
